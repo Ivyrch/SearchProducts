@@ -9,6 +9,6 @@ Para o desenvolvimento do projeto foi utilizado JavaScript e React como bibliote
 ## Utilização da aplicação:
 Para fazer uso da aplicação, basta digitar no campo de busca o produtos desejados, ao confirmar a busca serão retornados cards com a informação que corresponde a busca.
 
-
-
+## O site pode ser acessado por aqui:
+https://search-api-products.herokuapp.com/
 
