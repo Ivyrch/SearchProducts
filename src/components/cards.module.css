@@ -1,0 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+.card {
+    background-color: rgb(81, 178, 188);
+    border: 2px;
+    border-radius: 5%;
+    font-family: 'Lato', sans-serif;
+    width: 170px;
+    height: 100px;
+    margin: 10px;
+    font-size: 10px;
+    padding: 10px;
+    
+    
+}
