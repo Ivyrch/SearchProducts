@@ -1,11 +1,12 @@
 
 import React, { useState, useEffect } from "react"; 
-import Card from "./components/Cards.jsx";
-import api from "./services/api.js";
+import Card from "../../components/Card/Cards.jsx";
+import api from "../../services/api.js";
+import Input from "../../components/Input/Input.jsx";
 
 
 
-function Procurar() {
+function Search() {
     const [products, setProducts] = useState([]);
     const [search, setSearch] = useState("");
 
@@ -20,23 +21,34 @@ function Procurar() {
             
           });
       };
-        
+    
+
+
+
+     function handleOnChange(e) { 
+      setSearch(e.target.value);
+
+     }
+
+
     function procurar(e) {
         e.preventDefault();
-        setSearch(e.target.value);
         Api();
     }
 
     return ( 
+      
         <div>
-        <input style={{width: 200, heigh: 200, margin: "5px"}}
+        <form onSubmit={procurar}>
+        <Input 
         type="text"
         name="search"
-        onChange={procurar}
+        onChange={handleOnChange}
         placeholder="Procurar.."
       />
 
-     <button onClick={procurar}>Procurar</button>
+     <button type="submit">Procurar</button>
+     </form>
       
         
       <div style={{display: "flex", flexWrap: "wrap" }}>
@@ -44,7 +56,7 @@ function Procurar() {
           return (
               
               
-                <Card 
+                <Card key={produtos.id}
                     name={produtos.name} 
                     type={produtos.type}
                  />                   
@@ -58,4 +70,4 @@ function Procurar() {
 
 }
 
-export default Procurar;
+export default Search;

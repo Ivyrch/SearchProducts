@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Procurar from "./Search";
-import axios from "axios";
+import Search from "./pages/Search/Search";
 
 function App() {
-  const [search, setSearch] = useState("");
-  
-
-
   return (
     <div className="app">
-      <Procurar/>
+      <Search />
     </div>
   );
 }
